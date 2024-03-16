@@ -70,3 +70,38 @@ function getDragAfterElement(list, y) {
         }
     }, { offset: Number.NEGATIVE_INFINITY }).element;
 }
+
+let currentHighlightIndex = -1; // Initialize with -1, meaning no initial highlight
+
+// Function to highlight the next or previous character
+function highlightChar(next = true) {
+    const items = initiative.querySelectorAll("li");
+    if (items.length === 0) return; // Do nothing if the list is empty
+
+    // Remove current highlight
+    if (currentHighlightIndex !== -1) {
+        items[currentHighlightIndex].classList.remove('highlight');
+    }
+
+    // Determine next index
+    if (next) {
+        currentHighlightIndex = (currentHighlightIndex + 1) % items.length;
+    } else {
+        currentHighlightIndex = (currentHighlightIndex - 1 + items.length) % items.length;
+    }
+
+    // Apply new highlight
+    items[currentHighlightIndex].classList.add('highlight');
+}
+
+// Event listeners for navigation buttons
+document.getElementById('next-char').addEventListener('click', () => highlightChar(true));
+document.getElementById('previous-char').addEventListener('click', () => highlightChar(false));
+
+// Initialize the first item as highlighted
+document.addEventListener('DOMContentLoaded', () => {
+    // ... Existing 'DOMContentLoaded' event listener content ...
+
+    // Optionally highlight the first item upon loading the page
+    highlightChar(true);
+});

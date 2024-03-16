@@ -15,7 +15,7 @@
     max-width: 540px;
     background: #fff;
     margin: 100px auto 20px;
-    padding: 40px 30px 70px;
+    padding: 40px 50px 70px 10px;
     border-radius: 10px; 
 }
 .tracker h2{
@@ -84,11 +84,11 @@ ul li span{
     position: absolute;
     right: 0;
     top: 5px;
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     font-size: 22px;
     color: #555;
-    line-height: 40px;
+    line-height: 34px;
     text-align: center;
     border-radius: 50%;
 }
@@ -98,4 +98,44 @@ ul li span:hover{
 .dragging {
     opacity: 0.3;
     color: #555;
+}
+#side-panel {
+    position: fixed;
+    right: 75px;
+    top: 185px;
+    width: 150px;
+    background: transparent;
+    height: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 10px 10px;
+}
+
+#side-panel button {
+    margin: 8px;
+    font-size: 25px; /* This size seems appropriate for visibility */
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    line-height: 30px; /* Helps to center the text vertically */
+    text-align: center; /* Center the text horizontally */
+    background-color: transparent; /* Or any color you prefer */
+    border: none;
+    padding: 10px 10px;
+    border-radius: 50%; /* Circular buttons */
+    cursor: pointer;
+    display: flex; /* Enable flexbox for button content */
+    justify-content: center; /* Center content horizontally in flex container */
+    align-items: center; /* Center content vertically in flex container */
+}
+
+#side-panel button:hover {
+    background-color: #e3f1ff; /* Slight highlight on hover */
+}
+
+.highlight {
+    /* Example styles for the highlight class */
+    background-color: #bae3bed0; /* Yellow background for highlighting */
+    border-radius: 10px; /* Optional outline to make it stand out */
 }
