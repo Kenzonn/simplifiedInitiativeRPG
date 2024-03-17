@@ -10,17 +10,19 @@
   <div class="container">
     <div class="tracker">
         <h2>Initiative Tracker <img src="images/icon.png"></h2>
-        <div class="row">
-          <input type="text" id="input-box" placeholder="Add name">
-          <button onclick="addChar()">Add</button>
-        </div>
-        <ul id="initiative-container">
-        </ul>
-    </div>
-    <div id="side-panel">
+        <div style="display: flex; justify-content: space-between;">
+          <div class="row">
+            <input type="text" id="input-box" placeholder="Add name">
+            <button onclick="addChar()">Add</button>
+          </div>
+              <div id="side-panel">
       <button id="previous-char">&#9650;</button>
       <button id="next-char">&#9660;</button>
     </div>
+        </div>
+        <ul id="initiative-container"></ul>
+    </div>
+
   </div>
 <script src="script.js"></script>
 </body>

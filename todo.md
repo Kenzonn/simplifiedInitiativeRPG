@@ -1,2 +1,2 @@
-\u00D7
-\25BC
+- fix arrows to change selected character - 
+- 
